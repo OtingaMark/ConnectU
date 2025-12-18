@@ -57,3 +57,235 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# ConnectU
+
+ConnectU is a values-based community web app that helps people:
+
+1) **Study & Academic Growth** — find study partners/groups by university, course, unit, and availability  
+2) **Faith & Spiritual Growth** — join Bible discussions, mentorship, and faith-based community  
+3) **Projects & Career Growth** — find teammates, build projects, and discover jobs/referrals  
+
+> We will NOT launch everything at once. We will build and ship one module fully before moving to the next.
+
+---
+
+## Why ConnectU Exists
+Many students and young professionals want:
+- accountability for studying
+- safe community to grow closer to God
+- people to build meaningful projects with
+- career opportunities through collaboration and referrals
+
+ConnectU focuses on *real matching* plus *strong moderation* to keep the platform clean and aligned with Christian values.
+
+---
+
+## Core Product Principles
+
+### 1) Module-based design (“tabs”)
+A user has **one account**, and can add multiple modules over time (like tabs):
+- Study Finder
+- Faith (Bible Discussions)
+- Projects
+- Jobs
+- Dating (last — only after safety is proven)
+
+Users can add a module using a **“+ Add Module”** button on their profile. Each module has its own fields and listing details.
+
+### 2) Safety first
+ConnectU does not allow content that goes against Christian values, including:
+- nudity/porn/sexually explicit content
+- profanity/dirty language
+- harassment, hate speech, threats, bullying
+- scams/fraud/impersonation
+- illegal activity
+
+We enforce this using:
+- profanity filtering (text)
+- reporting + moderation queue
+- warnings → suspensions → bans
+- rate limits to reduce spam
+- (later) image scanning for nudity
+
+### 3) Build in phases (no “big bang” launch)
+We ship small, working features:
+- build **Study Finder** fully
+- then build **Faith** fully
+- then Projects/Jobs
+- then Premium payments
+- Dating is always last
+
+---
+
+## Tech Stack
+- **Backend:** PHP (Laravel)
+- **Database:** MySQL (XAMPP) or PostgreSQL
+- **Auth:** Email/Password + Google Sign-In (Laravel Socialite)
+- **Payments (phased):** PayPal → M-Pesa (Daraja) → Bank/Card gateway
+- **Frontend:** Blade + Tailwind (or Bootstrap later)
+
+---
+
+## MVP Roadmap
+
+### Phase 0 — Setup
+- Laravel setup
+- Auth (email/password)
+- Base profile
+- Module system skeleton (study + faith enabled by default)
+
+### Phase 1 — Study Finder (MVP 1)
+- onboarding: choose Study Finder
+- create/edit listing (uni, course, unit, availability)
+- browse + filters
+- request to connect
+- basic chat
+- report + admin review queue
+
+### Phase 2 — Faith (MVP 2)
+- create Bible discussion groups
+- topics + schedule
+- moderated group chat
+- report + moderation controls
+
+### Phase 3 — Projects & Career (MVP 3)
+- project/team listings
+- skills/roles matching
+- basic job/referral posts
+
+### Phase 4 — Premium subscriptions
+- daily/weekly/monthly/yearly plans
+- boosts + advanced filters + higher limits
+- PayPal + M-Pesa
+
+### Phase 5 — Dating (last)
+Only after moderation is proven and verification is in place.
+
+---
+
+## Local Setup
+
+```bash
+git clone https://github.com/OtingaMark/ConnectU.git
+cd ConnectU
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
+# ConnectU
+
+ConnectU is a values-based community web app that helps people:
+
+1) **Study & Academic Growth** — find study partners/groups by university, course, unit, and availability  
+2) **Faith & Spiritual Growth** — join Bible discussions, mentorship, and faith-based community  
+3) **Projects & Career Growth** — find teammates, build projects, and discover jobs/referrals  
+
+> We will NOT launch everything at once. We will build and ship one module fully before moving to the next.
+
+---
+
+## Why ConnectU Exists
+Many students and young professionals want:
+- accountability for studying
+- safe community to grow closer to God
+- people to build meaningful projects with
+- career opportunities through collaboration and referrals
+
+ConnectU focuses on *real matching* plus *strong moderation* to keep the platform clean and aligned with Christian values.
+
+---
+
+## Core Product Principles
+
+### 1) Module-based design (“tabs”)
+A user has **one account**, and can add multiple modules over time (like tabs):
+- Study Finder
+- Faith (Bible Discussions)
+- Projects
+- Jobs
+- Dating (last — only after safety is proven)
+
+Users can add a module using a **“+ Add Module”** button on their profile. Each module has its own fields and listing details.
+
+### 2) Safety first
+ConnectU does not allow content that goes against Christian values, including:
+- nudity/porn/sexually explicit content
+- profanity/dirty language
+- harassment, hate speech, threats, bullying
+- scams/fraud/impersonation
+- illegal activity
+
+We enforce this using:
+- profanity filtering (text)
+- reporting + moderation queue
+- warnings → suspensions → bans
+- rate limits to reduce spam
+- (later) image scanning for nudity
+
+### 3) Build in phases (no “big bang” launch)
+We ship small, working features:
+- build **Study Finder** fully
+- then build **Faith** fully
+- then Projects/Jobs
+- then Premium payments
+- Dating is always last
+
+---
+
+## Tech Stack
+- **Backend:** PHP (Laravel)
+- **Database:** MySQL (XAMPP) or PostgreSQL
+- **Auth:** Email/Password + Google Sign-In (Laravel Socialite)
+- **Payments (phased):** PayPal → M-Pesa (Daraja) → Bank/Card gateway
+- **Frontend:** Blade + Tailwind (or Bootstrap later)
+
+---
+
+## MVP Roadmap
+
+### Phase 0 — Setup
+- Laravel setup
+- Auth (email/password)
+- Base profile
+- Module system skeleton (study + faith enabled by default)
+
+### Phase 1 — Study Finder (MVP 1)
+- onboarding: choose Study Finder
+- create/edit listing (uni, course, unit, availability)
+- browse + filters
+- request to connect
+- basic chat
+- report + admin review queue
+
+### Phase 2 — Faith (MVP 2)
+- create Bible discussion groups
+- topics + schedule
+- moderated group chat
+- report + moderation controls
+
+### Phase 3 — Projects & Career (MVP 3)
+- project/team listings
+- skills/roles matching
+- basic job/referral posts
+
+### Phase 4 — Premium subscriptions
+- daily/weekly/monthly/yearly plans
+- boosts + advanced filters + higher limits
+- PayPal + M-Pesa
+
+### Phase 5 — Dating (last)
+Only after moderation is proven and verification is in place.
+
+---
+
+## Local Setup
+
+```bash
+git clone https://github.com/OtingaMark/ConnectU.git
+cd ConnectU
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
