@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Module; // make sure this is at the top with other "use" statements
 
 class User extends Authenticatable
 {
@@ -56,5 +57,10 @@ class User extends Authenticatable
         return $this->belongsToMany(Module::class, 'user_modules')
             ->withPivot('is_active')
             ->withTimestamps();
+    }
+
+    public function hasCustomizedModules(): bool
+    {
+        return $this->modules()->exists();
     }
 }

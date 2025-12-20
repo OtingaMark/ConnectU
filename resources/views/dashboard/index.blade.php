@@ -21,6 +21,18 @@
                 <p class="text-gray-600">
                     Study Finder and Faith are enabled by default. You’ll be able to add more modules soon.
                 </p>
+
+                <div class="mb-6 flex gap-4 border-b pb-2">
+                    @foreach ($modules as $module)
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded">
+                            {{ $module->name }}
+                        </span>
+                    @endforeach
+
+                    <a href="{{ route('onboarding') }}" class="text-blue-600 ml-auto">
+                        + Add Module
+                    </a>
+                </div>
             </div>
 
         </div>
